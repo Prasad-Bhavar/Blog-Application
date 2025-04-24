@@ -2,9 +2,8 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
-  
   subsets: ["latin"],
-  weight:["400","500","600","700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 // const geistMono = Geist_Mono({
@@ -21,7 +20,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} antialiased`}
+        className={`${outfit.variable} undefined antialiased`}
+        style={{ marginRight: "0px" }}
       >
         {children}
       </body>

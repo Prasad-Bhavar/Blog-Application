@@ -1,17 +1,17 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import { assets, blog_data } from '@/Assets/assets'
+import { assets } from '@/Assets/assets'
 import Image from 'next/image'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import axios from 'axios';
 
 const page = ({ params }) => {
-
+  const {id} = React.use(params);
   const [data, setData] = useState(null);
   const fetchBlogData = async () => {
 
-    const response = await axios.get(`/api/blog?id=${params.id}`);
+    const response = await axios.get(`/api/blog?id=${id}`);
     setData(response.data.blog);
     console.log(response.data.blog);
     // or
